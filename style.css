@@ -5,7 +5,7 @@
     --page-4-color: #689F38;
     --btn-primary-color: #f4f4f4;
     --btn-secondary-color: #333;
-    --animate-speed: 1s;
+    --animate-speed: 2s;
 }
 
 body {
@@ -67,4 +67,34 @@ body {
 .btn-dark:hover {
     background: var(--btn-primary-color);
     color: var(--btn-secondary-color);
+}
+
+/* Page Animation */
+
+#page-1 h1 {
+    transform: translateY(-1200px);
+    animation: heading var(--animate-speed) forwards ease-in;
+
+}
+
+/* Keyframe 1 */
+
+@keyframes heading{
+    to {
+    transform: translateY(0);
+    }
+}
+
+#page-1 p {
+    transform: translateX(-2000px);
+    animation: paragraph var(--animate-speed) forwards ease-in 1s;
+
+}
+
+/* Keyframe 2 */
+
+@keyframes paragraph{
+    to {
+    transform: translateX(0);
+    }
 }
