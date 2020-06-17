@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <title>SlideShow</title>
 </head>
+
 <body>
     <!-- Page 1 -->
     <section id="page-1" class="page">
         <h1>Bem Vindo a Minha Apresentação</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore tenetur beatae, voluptas rem perspiciatis eligendi iure voluptatibus deleniti minima repellendus odit quae repudiandae suscipit quis? Blanditiis eos autem amet nemo, omnis, fuga fugit cumque consectetur inventore deserunt debitis minima.
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore tenetur beatae, voluptas rem perspiciatis
+            eligendi iure voluptatibus deleniti minima repellendus odit quae repudiandae suscipit quis? Blanditiis eos
+            autem amet nemo, omnis, fuga fugit cumque consectetur inventore deserunt debitis minima.
         </p>
         <div>
             <a href="#page-2" class="btn">Próxima Página <i class="fas fa-arrow-circle-down"></i></a>
@@ -20,7 +25,9 @@
     <!-- Page 2 -->
     <section id="page-2" class="page">
         <h1>Página 2</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore tenetur beatae, voluptas rem perspiciatis eligendi iure voluptatibus deleniti minima repellendus odit quae repudiandae suscipit quis? Blanditiis eos autem amet nemo, omnis, fuga fugit cumque consectetur inventore deserunt debitis minima.
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore tenetur beatae, voluptas rem perspiciatis
+            eligendi iure voluptatibus deleniti minima repellendus odit quae repudiandae suscipit quis? Blanditiis eos
+            autem amet nemo, omnis, fuga fugit cumque consectetur inventore deserunt debitis minima.
         </p>
         <div>
             <a href="#page-1" class="btn btn-dark">Página Anterior<i class="fas fa-arrow-circle-up"></i></a>
@@ -30,7 +37,9 @@
     <!-- Page 3 -->
     <section id="page-3" class="page">
         <h1>Página 3</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore tenetur beatae, voluptas rem perspiciatis eligendi iure voluptatibus deleniti minima repellendus odit quae repudiandae suscipit quis? Blanditiis eos autem amet nemo, omnis, fuga fugit cumque consectetur inventore deserunt debitis minima.
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore tenetur beatae, voluptas rem perspiciatis
+            eligendi iure voluptatibus deleniti minima repellendus odit quae repudiandae suscipit quis? Blanditiis eos
+            autem amet nemo, omnis, fuga fugit cumque consectetur inventore deserunt debitis minima.
         </p>
         <div>
             <a href="#page-2" class="btn btn-dark">Página Anterior<i class="fas fa-arrow-circle-up"></i></a>
@@ -40,11 +49,33 @@
     <!-- Page 4 -->
     <section id="page-4" class="page">
         <h1>Página 4</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore tenetur beatae, voluptas rem perspiciatis eligendi iure voluptatibus deleniti minima repellendus odit quae repudiandae suscipit quis? Blanditiis eos autem amet nemo, omnis, fuga fugit cumque consectetur inventore deserunt debitis minima.
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore tenetur beatae, voluptas rem perspiciatis
+            eligendi iure voluptatibus deleniti minima repellendus odit quae repudiandae suscipit quis? Blanditiis eos
+            autem amet nemo, omnis, fuga fugit cumque consectetur inventore deserunt debitis minima.
         </p>
         <div>
             <a href="#page-3" class="btn btn-dark">Página Anterior<i class="fas fa-arrow-circle-up"></i></a>
         </div>
     </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        // Smooth Scrolling JQuery
+        $('.btn').on('click', function (event) {
+            if (this.hash !== '') {
+                event.preventDefault();
+                const hash = this.hash;
+                $('html, body').animate(
+                    {
+                        scrollTop: $(hash).offset().top
+                    },
+                    800
+                );
+            }
+        });
+    </script>
+
 </body>
+
 </html>
