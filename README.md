@@ -1,7 +1,7 @@
 # slideshow
 ## Slideshow
 ## Descrição 
-Apresentação de slides utilizando animaçoes e transições do CSS
+Apresentação de slides utilizando animações e transições do CSS
 ### Tecnologias Usadas:
 * HTML5
 * CSS3
